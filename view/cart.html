@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="cart-container" ng-controller="myController">
+        <div class="container my-5">
+          <div class="row">
+            <div class="title px-3 col-10">
+              <h2 class="position-relative d-inline-block">Products</h2>
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="inputImage" class="form-label">Image</label>
+                <input type="file" class="form-control" id="formFileSm" onchange="angular.element(this).scope().getFileDetails(this)"   ng-model="product.image">
+              </div>
+              <div class="mb-3">
+                <label for="inputName" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="inputName" ng-model="product.name" placeholder="Enter product name">
+              </div>
+              <div class="mb-3">
+                <label for="inputPrice" class="form-label">Price</label>
+                <input type="number" class="form-control" id="inputPrice" ng-model="product.price" placeholder="Enter price">
+              </div>
+              <button type="submit" class="btn btn-primary" ng-click="add()">Add Product</button>
+            </form>
+            <table class="table table-bordered mt-5">
+              <thead class="text-center table-dark">
+                <tr>
+                  <th>STT</th>
+                  <th>Img</th>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Remove</th>
+                  <th>Update</th>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr ng-repeat="p in products | filter:searchText | limitTo:6:begin" ng-init="p.quantity = 1">
+                  <td>{{ $index + begin + 1 }}</td>
+                  <td><img src="./images/{{p.image}}" alt="" width="110px" /></td>
+                  <td>{{p.name}}</td>
+                  <td>{{p.price}}</td>
+                  <td>
+                    <input class="w-25 pl-1" type="number" value="1" ng-model="p.quantity" />
+                  </td>
+                  <td>{{p.price * p.quantity}}</td>
+                  <td>
+                    <button class="btn btn-primary" ng-click="delete($index + begin)">Remove</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="edit($index + begin)">Update</button>
+                  </td>
+                </tr>
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Cập nhật thông tin sản phẩm
+                        </h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form name="update-form">
+                          <div class="form-group">
+                            <label for="name">Tên sản phẩm</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="name"
+                              name="name"
+                              ng-model="product.name"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="price">Giá sản phẩm</label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="price"
+                              name="price"
+                              ng-model="product.price"
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label for="quantity">Số lượng</label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="quantity"
+                              name="quantity"
+                              ng-model="product.quantity"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Hủy
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          ng-click="update()"
+                        >
+                          Cập nhật
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </tbody>
+            </table>
+            <div class="card-footer">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="" ng-click="first()">First</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="" ng-click="prev()">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="" ng-click="next()">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="" ng-click="last()">Last</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

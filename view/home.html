@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      id="header"
+      class="vh-100 carousel slide"
+      data-bs-ride="carousel"
+      style="padding-top: 104px"
+    >
+      <div class="container h-100 d-flex align-items-center carousel-inner">
+        <div class="text-center carousel-item active">
+          <h2 class="text-capitalize text-white">best collection</h2>
+          <h1 class="text-uppercase py-2 fw-bold text-white">new arrivals</h1>
+          <a href="" class="btn mt-3 text-uppercase">shop now</a>
+        </div>
+        <!--  -->
+        <div class="text-center carousel-item">
+          <h2 class="text-capitalize text-white">best price</h2>
+          <h1 class="text-uppercase py-2 fw-bold text-white">new season</h1>
+          <a href="" class="btn mt-3 text-uppercase">buy now</a>
+        </div>
+      </div>
+      <!-- button prev next -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#header"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#header"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </header>
+    <section id="collection" class="py-5" ng-controller="myController">
+      <div class="container">
+        <div class="title text-center">
+          <h2 class="position-relative d-inline-block">New Collection</h2>
+        </div>
+        <div class="row g-0">
+          <div
+            class="d-flex flex-wrap justify-content-center mt-5 filter-button-group"
+          >
+            <button
+              type="button"
+              class="btn m-2 text-dark active-filter-btn"
+              ng-click="filterItems('*')"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="btn m-2 text-dark"
+              ng-click="filterItems('.best')"
+            >
+              Best Sellers
+            </button>
+            <button
+              type="button"
+              class="btn m-2 text-dark"
+              ng-click="filterItems('.feat')"
+            >
+              Featured
+            </button>
+            <button
+              type="button"
+              class="btn m-2 text-dark"
+              ng-click="filterItems('.new')"
+            >
+              New Arrival
+            </button>
+          </div>
+          <div class="collection-list mt-4 row gx-0 gy-3">
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="card position-relative border-0">
+                <a href="product-detail.html"
+                  ><img src="images/hinh1.avif" alt=""
+                /></a>
+
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div
+                class="card collection-img position-relative border-0 overflow-hidden"
+              >
+                <img src="images/hinh6.avif" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="card collection-img position-relative border-0">
+                <img src="images/hinh4.avif" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capital my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="card collection-img position-relative border-0">
+                <img src="images/hinh5.avif" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="card position-relative border-0">
+                <img src="images/c_t-shirt_men.png" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+              <div class="card position-relative border-0">
+                <img src="images/c_tunic-shirt_girl.png" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+              <div class="card position-relative border-0">
+                <img src="images/c_undershirt.png" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+              <div class="card position-relative border-0">
+                <img src="images/c_western-shirt.png" alt="" />
+                <span
+                  class="position-absolute bg-primary text-white d-flex align-items-center justify-content-center"
+                  >sale</span
+                >
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="rating">
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                      <span class="text-primary"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </div>
+                    <p class="text-capitalize my-1">gray shirt</p>
+                    <span class="fw-bold">$45.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container" ng-controller="myController">
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <section id="special">
+            <div class="container">
+              <div class="title text-center py-5">
+                <h2 class="position-relative d-inline-block">
+                  Special Selection
+                </h2>
+              </div>
+
+              <div class="special-list row g-0">
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_2.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <p class="fw-bold mb-lg-2">$ 45.50</p>
+
+                      <button type="button" class="btn btn-primary">
+                        Add the cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_1.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <p class="fw-bold mb-lg-2">$ 45.50</p>
+                      <button type="button" class="btn btn-primary">
+                        Add the cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_3.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <p class="fw-bold mb-lg-2">$ 45.50</p>
+                      <button type="button" class="btn btn-primary">
+                        Add the cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_4.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <p class="fw-bold mb-lg-2">$ 45.50</p>
+                      <button type="button" class="btn btn-primary">
+                        Add the cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          <section id="special">
+            <div class="container">
+              <div class="title text-center py-5">
+                <h2 class="position-relative d-inline-block">
+                  Special Selection
+                </h2>
+              </div>
+
+              <div class="special-list row g-0">
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_1.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <p class="fw-bold mb-lg-2">$ 45.50</p>
+
+                      <button type="button" class="btn btn-primary">
+                        Add the cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_2.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <p class="fw-bold mb-lg-2">$ 45.50</p>
+
+                      <button type="button" class="btn btn-primary">
+                        Add the cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_3.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <span class="fw-bold">$ 45.50</span>
+                      <div>
+                        <a href="" class="btn btn-primary mt-3">Add to cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class="card border-0">
+                    <div class="special-img position-relative overflow-hidden">
+                      <img src="images/special_product_2.jpg" class="w-100" />
+                      <span
+                        class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </div>
+                    <span
+                      class="position-absolute d-flex align-items-center justify-content-center text-primary fs-4"
+                      ><i class="fas fa-heart"></i
+                    ></span>
+                    <div class="card-body text-center">
+                      <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+                      <span class="fw-bold">$ 45.50</span>
+                      <div>
+                        <a href="" class="btn btn-primary mt-3">Add to cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <ul
+        class="nav nav-pills mb-3 d-flex justify-content-lg-end"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+          >
+            Previous
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            1
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            2
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+          >
+            Next
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section id="offers" class="py-5" ng-controller="myController">
+      <div class="container">
+        <div
+          class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start"
+        >
+          <div class="offer-content">
+            <h2 class="text-white">Discount up to 40%</h2>
+            <h1 class="mt-2 mb-4 text-white">Grand Sale Offer !</h1>
+            <button class="btn btn-primary">Buy now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blogs" class="py-5" ng-controller="myController">
+      <div class="container">
+        <div class="title text-center py-5">
+          <h2 class="position-relative d-inline-block">Our Latest Blog</h2>
+        </div>
+        <div class="row g-3">
+          <div class="card col-lg-4 col-md-6 border-0 bg-transparent my-3">
+            <img src="images/blog_1.jpg" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                vitae! Sapiente assumenda sit, nobis beatae quis saepe odit
+                harum cupiditate ipsam maiores natus veritatis quae voluptates
+                illo! Esse, consequuntur nisi!
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="fw-bold"> Author: </span>
+                  John Doe
+                </small>
+              </p>
+              <a href="#" class="btn"> Read more</a>
+            </div>
+          </div>
+          <div class="card col-lg-4 col-md-6 border-0 bg-transparent my-3">
+            <img src="images/blog_2.jpg" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                vitae! Sapiente assumenda sit, nobis beatae quis saepe odit
+                harum cupiditate ipsam maiores natus veritatis quae voluptates
+                illo! Esse, consequuntur nisi!
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="fw-bold"> Author: </span>
+                  John Doe
+                </small>
+              </p>
+              <a href="#" class="btn"> Read more</a>
+            </div>
+          </div>
+          <div class="card col-lg-4 col-md-6 border-0 bg-transparent">
+            <img src="images/blog_3.jpg" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                vitae! Sapiente assumenda sit, nobis beatae quis saepe odit
+                harum cupiditate ipsam maiores natus veritatis quae voluptates
+                illo! Esse, consequuntur nisi!
+              </p>
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="fw-bold"> Author: </span>
+                  John Doe
+                </small>
+              </p>
+              <a href="#" class="btn"> Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row gy-lg-5 align-items-center">
+          <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+            <div class="title pt-3 pb-5">
+              <h2 class="position-relative d-inline-block ms-4">About Us</h2>
+            </div>
+            <p class="lead text-muted">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+              ipsam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem fuga blanditiis, modi exercitationem quae quam eveniet!
+              Minus labore voluptatibus corporis recusandae accusantium velit,
+              nemo, nobis, nulla ullam pariatur totam quos.
+            </p>
+          </div>
+          <div class="col-lg-6 order-lg-0">
+            <img src="images/about_us.jpg" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <!-- popular -->
+      <section id="cart-container" ng-controller="myController">
+        <div class="container my-5">
+          <div class="row">
+            <section id="newsletter" class="py-5">
+              <div class="container">
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="title text-center pt-3 pb-5">
+                    <h2 class="position-relative d-inline-block ms-4">
+                      Popular of the years
+                    </h2>
+                  </div>
+                  <div class="input-group mb-3 mt-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search ..."
+                      ng-model="searchText"
+                    />
+                    <button class="btn btn-primary" type="submit">
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <table class="table mt-5">
+              <tbody class="text-center">
+                <div class="row">
+                  <div class="col-md-6 col-lg-4">
+                    <div
+                      class="card-body mb-3"
+                      ng-repeat="p in products.slice(0, 3)|  filter:searchText "
+                    >
+                      <card
+                        class="d-flex align-items-start justify-content-start"
+                      >
+                        <img
+                          src="./images/{{p.image}}"
+                          alt=""
+                          width="110px"
+                          class="img-fluid pe-3 w-25"
+                        />
+
+                        <div>
+                          <p class="mb-0">{{p.name}}</p>
+                          <span>{{p.price}}</span>
+                        </div>
+                      </card>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div
+                      class="card-body mb-3"
+                      ng-repeat="p in products.slice(6, 9)|  filter:searchText "
+                    >
+                      <card
+                        class="d-flex align-items-start justify-content-start"
+                      >
+                        <img
+                          src="./images/{{p.image}}"
+                          alt=""
+                          width="110px"
+                          class="img-fluid pe-3 w-25"
+                        />
+
+                        <div>
+                          <p class="mb-0">{{p.name}}</p>
+                          <span>{{p.price}}</span>
+                        </div>
+                      </card>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div
+                      class="card-body mb-3"
+                      ng-repeat="p in products.slice(3, 6)|  filter:searchText "
+                    >
+                      <card
+                        class="d-flex align-items-start justify-content-start"
+                      >
+                        <img
+                          src="./images/{{p.image}}"
+                          alt=""
+                          width="110px"
+                          class="img-fluid pe-3 w-25"
+                        />
+
+                        <div>
+                          <p class="mb-0">{{p.name}}</p>
+                          <span>{{p.price}}</span>
+                        </div>
+                      </card>
+                    </div>
+                  </div>
+                </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter" class="py-5">
+        <div class="container">
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="title text-center pt-3 pb-5">
+              <h2 class="position-relative d-inline-block ms-4">
+                Newsletter Subscription
+              </h2>
+            </div>
+
+            <p class="text-center text-muted">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              rem officia accusantium maiores quisquam dolorum?
+            </p>
+            <div class="input-group mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Email ..."
+              />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": "a30f",
+      "image": "top_rated_3.jpg",
+      "name": "hhhhhhhh",
+      "price": 780
+    },
+    {
+      "id": "15b6",
+      "image": "best_selling_2.jpg",
+      "name": "Vest",
+      "price": 789
+    },
+    {
+      "id": "8840",
+      "image": "special_product_1.jpg",
+      "name": "huhu",
+      "price": 897
+    },
+    {
+      "id": "e9cb",
+      "name": "Shirt_Men",
+      "image": "c_t-shirt_men.png",
+      "price": 909,
+      "quantity": 1
+    },
+    {
+      "id": "7357",
+      "image": "7287fc1cc6cc3d8875c69aaac00ae053.jpg",
+      "name": "Gray Shirt 1",
+      "price": 809
+    }
+  ]
+}
